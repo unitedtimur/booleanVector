@@ -308,7 +308,7 @@ bv bv::operator^(bv const & tmp)
 
 	for (i = memory, index_string = tmp.memory; min >= 0; i--, index_string--, min--)
 	{
-		temp.vector[min] = vector[i] | tmp.vector[index_string];
+		temp.vector[min] = vector[i] ^ tmp.vector[index_string];
 	}
 
 	return temp;
